@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/my-services")
 public class MyController {
 
-    private final String NOMBRE_ALUMNO = "Angel Jesus Hernandez Tranquilino";
+    private final String Practica = "Fizzbuzz y Fibonacci";
 
     @GetMapping("/fizzbuzz/{n}")
     public String fizzBuzz(@PathVariable int n) {
@@ -22,14 +22,14 @@ public class MyController {
                 System.out.println(i);
             }
         }
-        return NOMBRE_ALUMNO;
+        return Practica;
     }
 
 
     @GetMapping("/fibonacci/{n}")
     public String fibonacci(@PathVariable int n) {
         if (n <= 0) {
-            return NOMBRE_ALUMNO;
+            return Practica;
         }
 
         long a = 0;
@@ -47,6 +47,6 @@ public class MyController {
                 b = siguiente;
             }
         }
-        return NOMBRE_ALUMNO;
+        return Practica;
     }
 }
